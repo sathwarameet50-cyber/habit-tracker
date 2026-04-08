@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Habit Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-brand">
+      <div class="nav-logo">H</div>
+      <span>HabitFlow</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link active">Tracker</a>
+      <a href="analysis.html" class="nav-link">Analysis</a>
+    </div>
+  </nav>
+
+  <div class="app">
+
+    <div class="header">
+      <div>
+        <h1 id="greeting">Good morning</h1>
+        <p id="dateLabel"></p>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat-card">
+        <div class="stat-label">Today's progress</div>
+        <div class="stat-value" id="statToday">0 / 0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Week completion</div>
+        <div class="stat-value" id="statWeek">0%</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Current streak</div>
+        <div class="stat-value" id="statStreak">0 days</div>
+      </div>
+    </div>
+
+    <div class="progress-bar-wrap">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="grid-wrap">
+      <div class="grid-header">
+        <div class="col-habit">Habit</div>
+        <div class="col-day" id="dh0"></div>
+        <div class="col-day" id="dh1"></div>
+        <div class="col-day" id="dh2"></div>
+        <div class="col-day" id="dh3"></div>
+        <div class="col-day" id="dh4"></div>
+        <div class="col-day" id="dh5"></div>
+        <div class="col-day" id="dh6"></div>
+        <div class="col-count">Done</div>
+      </div>
+      <div id="habitRows"></div>
+    </div>
+
+    <div class="add-row">
+      <input type="text" id="habitInput" placeholder="Type a new habit..." maxlength="30" />
+      <div class="color-picker" id="colorPicker"></div>
+      <button onclick="addHabit()">+ Add Habit</button>
+    </div>
+
+    <footer class="footer">
+      Made with love · HabitFlow &copy; 2025
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
