@@ -155,6 +155,14 @@ function addHabit() {
   render();
 }
 
+function clearAllActivity() {
+  if (confirm('Clear all check marks for this week? Your habits will stay but all ticks will be reset.')) {
+    habits = habits.map(h => ({ ...h, checks: [0,0,0,0,0,0,0] }));
+    saveToStorage();
+    render();
+  }
+}
+
 function saveToStorage() {
   localStorage.setItem('habitflow_habits', JSON.stringify(habits));
   localStorage.setItem('habitflow_nextId', nextId);
