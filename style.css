@@ -503,3 +503,29 @@ body {
     width: 100%;
   }
 }
+/* ── Header with clear button ── */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.clear-btn {
+  background: #fff;
+  color: #ef4444;
+  border: 1.5px solid #ef4444;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  margin-top: 4px;
+}
+
+.clear-btn:hover {
+  background: #ef4444;
+  color: #fff;
+}
